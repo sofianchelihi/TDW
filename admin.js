@@ -30,6 +30,11 @@ $(document).ready(function(){
         location.replace("Login.html");
     });
 
+    // asynch branch
+    function test(){
+        return 0;
+    }
+
     function AddT1(){
         $.ajax({
             url:"http://localhost/Serveur/TDW/admin.php",
