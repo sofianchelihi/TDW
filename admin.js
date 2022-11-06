@@ -30,10 +30,7 @@ $(document).ready(function(){
         location.replace("Login.html");
     });
 
-    // asynch branch
-    function test(){
-        return 0;
-    }
+    
 
     function AddT1(){
         $.ajax({
@@ -112,7 +109,7 @@ $(document).ready(function(){
         $(".form1").hide();
      });
 
-     function inserEelemntT1(c,s,p){
+     function inserEelemntT1(c,s,p,callfunction){
         $.ajax({
             url:"http://localhost/Serveur/TDW/admin.php",
             type:'POST',
@@ -123,10 +120,15 @@ $(document).ready(function(){
                 Superficie:s,
                 Production:p
             }),
-            success:(res)=>{}    
+            success:(res)=>{
+                callfunction();
+            }, 
+            error:(res)=>{
+               console.log(res);
+            }  
         });
      }
-     function inserEelemntT2(e,n){
+     function inserEelemntT2(e,n,callfunction){
         $.ajax({
             url:"http://localhost/Serveur/TDW/admin.php",
             type:'POST',
@@ -136,11 +138,16 @@ $(document).ready(function(){
                 Nom_animal:e,
                 Nombre_tete:n
             }), 
-            success:(res)=>{}     
+            success:(res)=>{
+                callfunction();
+            }, 
+            error:(res)=>{
+               console.log(res);
+            }      
         });
     }
 
-    function supEelemntT1(n1){
+    function supEelemntT1(n1,callfunction){
         $.ajax({
             url:"http://localhost/Serveur/TDW/admin.php",
             type:'POST',
@@ -149,11 +156,16 @@ $(document).ready(function(){
                 service:"supEelemntT1",
                 num_sup_culture:n1
             }),  
-            success:(res)=>{}    
+            success:(res)=>{
+                callfunction();
+            }, 
+            error:(res)=>{
+               console.log(res);
+            }    
         });
     }
 
-    function supEelemntT2(n2){
+    function supEelemntT2(n2,callfunction){
         $.ajax({
             url:"http://localhost/Serveur/TDW/admin.php",
             type:'POST',
@@ -162,11 +174,16 @@ $(document).ready(function(){
                 service:"supEelemntT2",
                 num_sup_Espece:n2
             }),
-            success:(res)=>{}      
+            success:(res)=>{
+                callfunction();
+            }, 
+            error:(res)=>{
+               console.log(res);
+            }     
         });
     }
 
-    function editEelemntT1(a1,b1,c1,d1){
+    function editEelemntT1(a1,b1,c1,d1,callfunction){
         $.ajax({
             url:"http://localhost/Serveur/TDW/admin.php",
             type:'POST',
@@ -178,11 +195,16 @@ $(document).ready(function(){
                 edit_Superficie:c1,
                 edit_Production:d1
             }),
-            success:(res)=>{}      
+            success:(res)=>{
+                callfunction();
+            }, 
+            error:(res)=>{
+               console.log(res);
+            }      
         });
     }
 
-    function editEelemntT2(a2,b2,c2){
+    function editEelemntT2(a2,b2,c2,callfunction){
         $.ajax({
             url:"http://localhost/Serveur/TDW/admin.php",
             type:'POST',
@@ -193,7 +215,12 @@ $(document).ready(function(){
                 edit_Espece:b2,
                 edit_Nombre :c2,
             }), 
-            success:(res)=>{}     
+            success:(res)=>{
+                callfunction();
+            }, 
+            error:(res)=>{
+               console.log(res);
+            }     
         });
     }
   
@@ -205,8 +232,7 @@ $(document).ready(function(){
         $(".Superficie").val("")
         let Production = $(".Production").val();
         $(".Production").val("")
-        inserEelemntT1(culture,Superficie,Production);
-        setTimeout(()=>{AddT1()},1000)   
+        inserEelemntT1(culture,Superficie,Production,AddT1); 
      });
   
      $(".add2").submit(function(e){ 
@@ -215,24 +241,21 @@ $(document).ready(function(){
         $(".Espece").val("")
         let Nombre = $(".Nombre").val();
         $(".Nombre").val("")
-        inserEelemntT2(Espece,Nombre);
-        setTimeout(()=>{AddT2()},1000) 
+        inserEelemntT2(Espece,Nombre,AddT2);
      });
 
      $(".suprim1").submit(function(e){ 
         e.preventDefault();
         let num_sup_culture = $(".num_sup_culture").val();
         $(".num_sup_culture").val("")      
-        supEelemntT1(num_sup_culture);
-        setTimeout(()=>{AddT1()},1000)  
+        supEelemntT1(num_sup_culture,AddT1);
      });
 
      $(".suprim2").submit(function(e){ 
         e.preventDefault();
         let num_sup_Espece = $(".num_sup_Espece").val();
         $(".num_sup_Espece").val("")      
-        supEelemntT2(num_sup_Espece);
-        setTimeout(()=>{AddT2()},1000)   
+        supEelemntT2(num_sup_Espece,AddT2);
      });
 
      $(".edit1").submit(function(e){ 
@@ -245,8 +268,7 @@ $(document).ready(function(){
         $(".edit_Superficie").val("")
         let edit_Production = $(".edit_Production").val();
         $(".edit_Production").val("")
-        editEelemntT1(num_edit_culture,edit_culture,edit_Superficie,edit_Production);
-        setTimeout(()=>{AddT1()},1000)  
+        editEelemntT1(num_edit_culture,edit_culture,edit_Superficie,edit_Production,AddT1);
      });
 
      $(".edit2").submit(function(e){ 
@@ -257,7 +279,6 @@ $(document).ready(function(){
         $(".edit_Espece").val("")
         let edit_Nombre = $(".edit_Nombre").val();
         $(".edit_Nombre").val("")
-        editEelemntT2(num_edit_Espece,edit_Espece,edit_Nombre);
-        setTimeout(()=>{AddT2()},1000)  
+        editEelemntT2(num_edit_Espece,edit_Espece,edit_Nombre,AddT2);
      });
 });
