@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div class="title">Login Page</div>
+    <form id="form" method="POST" action="http://localhost/Serveur/TDW/Login.php">
+        <div class="forme">
+            <label> Username</label>
+            <input type="text" name="email" id="email" required value="Admin"><br>
+            <label> Password</label>
+            <input type="password" name="password" id="password" required value="Password"><br>
+            <button type="submit" id="send"> Sign in</button>
+        </div>
+    </form>
+    <script src="Login.js"></script>
+</body>
+</html>

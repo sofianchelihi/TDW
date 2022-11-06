@@ -1,0 +1,158 @@
+body{
+    overflow-x: hidden;
+}
+
+.lien{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.titre{
+    font-size: 20px;
+    font-weight: 600;
+    font-style:italic;
+    font-family: fantasy;
+    width: 100%;
+    text-align: center;
+}
+.tableau thead{
+    background-color: rgb(214, 214, 214);
+}
+.tableau tbody tr th{
+    background-color: rgb(214, 214, 214);
+    text-align: left;
+    padding-left: 12px;
+}
+.tableau{
+    border: 1px black dotted;
+}
+
+
+tbody tr:nth-child(odd){
+    background-color:burlywood;
+}
+tbody tr:nth-child(even){
+    background-color:aqua;
+}
+
+
+.menu{
+    list-style: none;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    background-color: rgb(210, 204, 204);
+    height: 50px;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
+.menu li{
+    width: 25%;
+    text-align: center;
+    margin: 0px;
+    list-style: none;
+}
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.list_type_agriculture{
+    position: relative;
+}
+.type_agriculture{
+    position: absolute;
+    top:34px;
+    width: 100%;
+    list-style:circle!important;
+    display: none;
+    background-color: rgb(210, 204, 204);
+}
+
+.list_type_agriculture:hover .type_agriculture{
+    display: block;
+}
+
+.type_agriculture li{
+    height: 35px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+.slider{
+    width: 100%;
+    overflow: hidden;
+    height: 300px; 
+}
+.diaporama{
+    width: 500%;
+    height: 300px!important;
+    display: flex;
+    animation-name: anim1;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+.imga{
+    width: 20%!important;
+    height:300px!important;
+}
+
+
+.diaporama:hover{
+    animation-play-state: paused;
+}
+
+
+
+@keyframes anim1
+{
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(-20%);
+    }
+    50%{
+        transform: translateX(-40%);
+    }
+    75%{
+        transform: translateX(-60%);
+    }
+    100%{
+        transform: translateX(-80%);
+    }
+}
+
+.t1{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.t2{
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 30px;
+    margin-top:15px;
+}
+
+.tableTitre{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.somme{
+    background-color: rgb(102, 182, 102)!important;
+}
+

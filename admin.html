@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title> Administrateur</title>
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div class="deconnect">
+        <button id="Deconnect"> Deconnect</button>
+    </div>
+    <section style="width: 100%;margin-top:40px;">
+        <span class="tableTitre">Principales productions végétales mondiales</span>
+        <table class="tableau t1">
+        <thead>
+           <tr>
+            <th scope="col">Culture </th>
+            <th scope="col">Superficie cultivée (1 000 ha) </th>
+            <th scope="col">Production totale(1 000 tonnes)</th>
+           </tr>
+        </thead>
+        <tbody class="bd1">
+           <tr>
+            <th scope="row"> Somme</th>
+            <td class="somme"></td>
+            <td class="somme"></td>
+           </tr>
+        </tbody>  
+        </table><br>
+
+
+        <span class="tableTitre">Principaux élevages mondiaux</span>
+
+
+
+        <table class="tableau t2">
+            <thead>
+            <tr>      
+             <th scope="col">Espèce  </th>
+             <th scope="col">Nombre(1000 têtes)</th>  
+            </tr>
+            </thead>
+            <tbody class="bd2">
+                <tr>
+                  <th scope="row"> Somme</th>
+                  <td class="somme"></td>   
+                </tr>
+            </tbody>
+         </table>
+    </section>
+    <span class="tableTitre"> Choisir un tebleau : </span><br><br>
+    <div class="choixTableButtons">
+        <button type="submit" class="button1 button">Table 01</button>
+        <button type="submit" class="button2 button">Table 02</button>
+    </div>
+        <form class="hidden form1 add1">
+            <div class="formT1 form">
+                <div>
+                    <label>culture</label>
+                    <input type="text" class="culture" required>
+                </div>
+                <div>
+                    <label>Superficie</label>
+                    <input type="number" class="Superficie" required>
+                </div>
+                <div>
+                    <label>Production</label>
+                    <input type="number" class="Production" required>
+                </div>
+                <button type="submit"> Ajouter culture</button>
+            </div>
+        </form>
+        <form class="hidden form1 suprim1">
+            <div class="formT1sup form">
+                <div>
+                    <label>Némuro de culture a supprimer</label>
+                    <input type="number" class="num_sup_culture" required>
+                </div>
+                
+                <button type="submit"> Supprimer culture</button>
+            </div>
+        </form>
+        <form class="hidden form1 edit1">
+            <div class="formT1edit form">
+                <div>
+                    <label>Némuro de culture a modifier</label>
+                    <input type="number" class="num_edit_culture" required>
+                </div>
+                <div>
+                    <label>culture</label>
+                    <input type="text" class="edit_culture" required>
+                </div>
+                <div>
+                    <label>Superficie</label>
+                    <input type="number" class="edit_Superficie" required>
+                </div>
+                <div>
+                    <label>Production</label>
+                    <input type="number" class="edit_Production" required>
+                </div>
+                <button type="submit"> Modifier culture</button>
+            </div>
+        </form>
+        <form class="hidden form2 add2">
+            <div class="formT2 form">
+                <div>
+                    <label>Espéce</label>
+                    <input type="text" class="Espece" required>
+                </div>
+                <div>
+                    <label>Nombre</label>
+                    <input type="number" class="Nombre" required>
+                </div>
+                <button type="submit"> Ajouter espéce</button>
+            </div>
+        </form>
+        <form class="hidden form2 suprim2">
+            <div class="formT2sup form">
+                <div>
+                    <label>Numéro d'espéce a supprimer</label>
+                    <input type="number" class="num_sup_Espece" required>
+                </div>
+                <button type="submit"> Supprimer espéce</button>
+            </div>
+        </form>
+        <form class="hidden form2 edit2">
+            <div class="formT2edit form">
+                <div>
+                    <label>Numéro d'espéce a modifier</label>
+                    <input type="number" class="num_edit_Espece" required>
+                </div>
+                <div>
+                    <label>Espéce</label>
+                    <input type="text" class="edit_Espece" required>
+                </div>
+                <div>
+                    <label>Nombre</label>
+                    <input type="number" class="edit_Nombre" required>
+                </div>
+                <button type="submit"> Modifier espéce</button>
+            </div>
+        </form>
+    <script src="admin.js"></script>
+
+</body>
+</html>

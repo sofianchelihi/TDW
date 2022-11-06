@@ -1,0 +1,171 @@
+body{
+    align-items: center;
+    overflow-x: hidden;
+    height: 2000px;
+}
+.deconnect{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(239, 231, 231);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.deconnect button{
+    width: 20%;
+    height: 35px;
+    border: solid rgb(212, 207, 207) 1px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 5px 4px 4px rgb(214, 210, 210);
+    margin-right: 5%;
+}
+
+.deconnect button:hover{
+   background-color: rgb(245, 165, 165);
+}
+
+
+.tableau thead{
+    background-color: rgb(214, 214, 214);
+}
+.tableau tbody tr th{
+    background-color: rgb(214, 214, 214);
+    text-align: left;
+    padding-left: 13px;
+}
+.tableau{
+    border: 1px black dotted;
+}
+
+tbody tr:nth-child(odd){
+    background-color:burlywood;
+}
+tbody tr:nth-child(even){
+    background-color:aqua;
+}
+
+.t1{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.t2{
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 30px;
+    margin-top:15px;
+}
+
+.tableTitre{
+    display: inline-block;
+    width: 100%;
+    text-align: center;   
+}
+
+.choixTableButtons{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.somme{
+    background-color: rgb(102, 182, 102)!important;
+}
+
+.button{
+    width: 25%;
+    height: 30px;
+    margin-right: 25px;
+    border-radius: 6px;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    border: solid rgb(177, 175, 175) 0.5px;
+    box-shadow: 3px 3px 3px rgb(180, 175, 175);
+}
+
+.button:hover{
+    background-color: rgb(214, 133, 133);
+    color: white;
+}
+
+.form{
+    width: 90%;
+    display: flex;
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
+
+.form div input{
+    margin-top: 8px;
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid rgb(111, 108, 108);
+}
+
+.form button{
+    width: 15%;
+    margin-left: 3%;
+    margin-top: 28px;
+    height: 30px;
+    border-radius: 6px;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    border: solid rgb(177, 175, 175) 0.5px;
+    box-shadow: 3px 3px 3px rgb(180, 175, 175);
+}
+
+.form button:hover{
+    background-color: rgb(214, 133, 133);
+    color: white;
+}
+
+
+.formT1 div{
+    width: 25%;
+    margin-left: 2%;
+    display: block;
+}
+
+
+.formT2 div{
+    width: 38%;
+    margin-left: 2%;
+    display: block;
+}
+
+.formT1sup div{
+    width: 80%;
+    margin-left: 2%;
+    display: block;
+}
+
+.formT1edit div{
+    width: 20%;
+    margin-left: 2%;
+    display: block;
+}
+.formT2sup div{
+    width: 80%;
+    margin-left: 2%;
+    display: block;
+}
+.formT2edit div{
+    width: 25%;
+    margin-left: 2%;
+    display: block;
+}
+
+
+
+
