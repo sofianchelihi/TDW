@@ -282,7 +282,7 @@ $(document).ready(function(){
         editEelemntT2(num_edit_Espece,edit_Espece,edit_Nombre,AddT2);
      });
     var so = 5 ;
-    
+    console.log(so);
 
 
 
