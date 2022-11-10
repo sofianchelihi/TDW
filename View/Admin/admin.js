@@ -1,5 +1,5 @@
 $.ajax({
-    url:"http://localhost/Serveur/TDW/admin.php",
+    url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
     type:'POST',
     dataType:'text',
     data:JSON.stringify({
@@ -9,15 +9,16 @@ $.ajax({
     }),
     success:(Data)=>{ 
         if(JSON.parse(Data)['etat']==false){
-            location.replace("Login.html");
+            location.replace("../Login/Login.html");
         }
     },   
 });
+
 $(document).ready(function(){
 
     $("#Deconnect").click(function(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/admin.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -27,14 +28,14 @@ $(document).ready(function(){
         });
         localStorage.removeItem('id');
         localStorage.removeItem('code');
-        location.replace("Login.html");
+        location.replace("../Login/Login.html");
     });
 
     
 
     function AddT1(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/admin.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -57,7 +58,7 @@ $(document).ready(function(){
 
     function AddT2(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/admin.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -111,7 +112,7 @@ $(document).ready(function(){
 
      function inserEelemntT1(c,s,p,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/admin.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -130,7 +131,7 @@ $(document).ready(function(){
      }
      function inserEelemntT2(e,n,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/admin.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -149,7 +150,7 @@ $(document).ready(function(){
 
     function supEelemntT1(n1,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/admin.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -167,7 +168,7 @@ $(document).ready(function(){
 
     function supEelemntT2(n2,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/admin.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -185,7 +186,7 @@ $(document).ready(function(){
 
     function editEelemntT1(a1,b1,c1,d1,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/admin.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -206,7 +207,7 @@ $(document).ready(function(){
 
     function editEelemntT2(a2,b2,c2,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/admin.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -280,11 +281,5 @@ $(document).ready(function(){
         let edit_Nombre = $(".edit_Nombre").val();
         $(".edit_Nombre").val("")
         editEelemntT2(num_edit_Espece,edit_Espece,edit_Nombre,AddT2);
-     });
-    var so = 5 ;
-    console.log(so);
-
-
-
-
+    });
 });

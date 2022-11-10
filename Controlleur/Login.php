@@ -7,7 +7,8 @@ header("Access-ControlAllow-Methods:POST,GET");
 
 
 $data = file_get_contents("php://input");
-$db = new PDO("mysql:host=localhost;dbname=tdw;charser=utf8;","root","");
+require_once '../Model/DataBase.php';
+global $db;
 
 if(isset($data)){
         $_REQUESt = $db->prepare("SELECT *from utilisateur where name_user=:username AND hash_pwd=:password");

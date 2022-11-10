@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     function AddT1(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/user.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/user.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -44,7 +44,7 @@ $(document).ready(function(){
 
     function AddT2(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/user.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/user.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -71,7 +71,7 @@ $(document).ready(function(){
 
 
    $.ajax({
-    url:"http://localhost/Serveur/TDW/user.php",
+    url:"http://localhost/Serveur/TDW/Controlleur/user.php",
     type:'POST',
     dataType:'text',
     data:JSON.stringify({
@@ -85,7 +85,7 @@ $(document).ready(function(){
     });
 
     $.ajax({
-        url:"http://localhost/Serveur/TDW/user.php",
+        url:"http://localhost/Serveur/TDW/Controlleur/user.php",
         type:'POST',
         dataType:'text',
         data:JSON.stringify({

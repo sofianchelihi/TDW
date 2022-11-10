@@ -7,7 +7,7 @@ header("Access-ControlAllow-Methods:POST,GET");
 
 
 $data = file_get_contents("php://input");
-$db = new PDO("mysql:host=localhost;dbname=tdw;charser=utf8;","root","");
+include '../Model/DataBase.php';
 
 if(isset($data)){
         $service = json_decode($data)->service;

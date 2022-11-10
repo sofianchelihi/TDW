@@ -7,7 +7,7 @@ $(document).ready(function(){
         $("#password").val("");
 
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Login.php",
+            url:"http://localhost/Serveur/TDW/Controlleur/Login.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -19,11 +19,11 @@ $(document).ready(function(){
                 if(res['etat']==true){
                     localStorage.setItem("id",res["id"])
                     localStorage.setItem("code",res["code"])
-                    location.replace("admin.html");
+                    location.replace("../Admin/admin.html");
                 }else{
                     alert("Mot de pass ou nom d'utilisateur incorrect !");
                 }
-            },   
+            },  
         });
     });
 
