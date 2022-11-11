@@ -72,7 +72,7 @@ INSERT INTO `sous_menu` (`Id_item_sous_menu`, `Id_item_menu`, `Nom_item_sous_men
 
 
 
---- Type agriculture
+
 
 
 CREATE TABLE IF NOT EXISTS `Type_agriculture` (
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `Type_agriculture` (
   PRIMARY KEY (`Id_type_agriculture`)
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=ascii COLLATE=ascii_bin;
 
-INSERT INTO `formation` (`Id_formation`, `Id_type_formation`, `Nom_formation`) VALUES
+INSERT INTO `Type_agriculture` (`Id_type_agriculture`, `Type_agriculture`) VALUES
 (1, 'agriculture conventionnelle'),
 (2, 'agriculture biologique'),
 (3, 'agriculture durable'),
@@ -156,6 +156,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
   `name_user` varchar(20) COLLATE ascii_bin NOT NULL,
   `hash_pwd` varchar(1024) COLLATE ascii_bin NOT NULL,
+  `con_hashcode` varchar(1024) COLLATE ascii_bin NULL,
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `name_user` (`name_user`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=ascii COLLATE=ascii_bin;

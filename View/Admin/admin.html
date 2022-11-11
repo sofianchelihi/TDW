@@ -9,6 +9,84 @@
     <script src="../jquery-3.6.1.min.js"></script>
 </head>
 <body>
+        <form class="edit1 mod1 hidden">
+            <div class="form">
+                <div>
+                    <label>culture</label>
+                    <input type="text" class="edit_culture" required>
+                </div>
+                <div>
+                    <label>Superficie</label>
+                    <input type="number" class="edit_Superficie" required>
+                </div>
+                <div>
+                    <label>Production</label>
+                    <input type="number" class="edit_Production" required>
+                </div>
+                <div class="ControlBut">
+                    <button type="submit"> Modifier culture</button>
+                    <button type="button" id="canceledit1"> Annuler</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="edit2 mod2 hidden">
+            <div class="form">
+                <div>
+                    <label>Espéce</label>
+                    <input type="text" class="edit_Espece" required>
+                </div>
+                <div>
+                    <label>Nombre</label>
+                    <input type="number" class="edit_Nombre" required>
+                </div>
+                <div class="ControlBut">
+                    <button type="submit"> Modifier espéce</button>
+                    <button type="button" id="canceledit2"> Annuler</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="hidden add1">
+            <div class="form">
+                <div>
+                    <label>culture</label>
+                    <input type="text" class="culture" required>
+                </div>
+                <div>
+                    <label>Superficie</label>
+                    <input type="number" class="Superficie" required>
+                </div>
+                <div>
+                    <label>Production</label>
+                    <input type="number" class="Production" required>
+                </div>
+                <div class="ControlBut">
+                    <button type="submit"> Ajouter culture</button>
+                    <button type="button" id="canceladd1"> Annuler</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="hidden add2">
+            <div class="form">
+                <div>
+                    <label>Espéce</label>
+                    <input type="text" class="Espece" required>
+                </div>
+                <div>
+                    <label>Nombre</label>
+                    <input type="number" class="Nombre" required>
+                </div>
+                <div class="ControlBut">
+                    <button type="submit"> Ajouter espéce</button>
+                    <button type="button" id="canceladd2"> Annuler</button>
+                </div>
+            </div>
+        </form>
+
+
+        
     <div class="deconnect">
         <button id="Deconnect"> Deconnect</button>
     </div>
@@ -20,6 +98,8 @@
             <th scope="col">Culture </th>
             <th scope="col">Superficie cultivée (1 000 ha) </th>
             <th scope="col">Production totale(1 000 tonnes)</th>
+            <th scope="col">Supprimer</th>
+            <th scope="col">Modifier</th>
            </tr>
         </thead>
         <tbody class="bd1">
@@ -41,109 +121,22 @@
             <tr>      
              <th scope="col">Espèce  </th>
              <th scope="col">Nombre(1000 têtes)</th>  
+             <th scope="col">Supprimer</th>
+             <th scope="col">Modifier</th>
             </tr>
             </thead>
             <tbody class="bd2">
                 <tr>
                   <th scope="row"> Somme</th>
-                  <td class="somme"></td>   
+                  <td class="somme"></td> 
+                  <td colspan=2> hi</td>
                 </tr>
             </tbody>
          </table>
     </section>
-    <span class="tableTitre"> Choisir un tebleau : </span><br><br>
-    <div class="choixTableButtons">
-        <button type="submit" class="button1 button">Table 01</button>
-        <button type="submit" class="button2 button">Table 02</button>
-    </div>
-        <form class="hidden form1 add1">
-            <div class="formT1 form">
-                <div>
-                    <label>culture</label>
-                    <input type="text" class="culture" required>
-                </div>
-                <div>
-                    <label>Superficie</label>
-                    <input type="number" class="Superficie" required>
-                </div>
-                <div>
-                    <label>Production</label>
-                    <input type="number" class="Production" required>
-                </div>
-                <button type="submit"> Ajouter culture</button>
-            </div>
-        </form>
-        <form class="hidden form1 suprim1">
-            <div class="formT1sup form">
-                <div>
-                    <label>Némuro de culture a supprimer</label>
-                    <input type="number" class="num_sup_culture" required>
-                </div>
-                
-                <button type="submit"> Supprimer culture</button>
-            </div>
-        </form>
-        <form class="hidden form1 edit1">
-            <div class="formT1edit form">
-                <div>
-                    <label>Némuro de culture a modifier</label>
-                    <input type="number" class="num_edit_culture" required>
-                </div>
-                <div>
-                    <label>culture</label>
-                    <input type="text" class="edit_culture" required>
-                </div>
-                <div>
-                    <label>Superficie</label>
-                    <input type="number" class="edit_Superficie" required>
-                </div>
-                <div>
-                    <label>Production</label>
-                    <input type="number" class="edit_Production" required>
-                </div>
-                <button type="submit"> Modifier culture</button>
-            </div>
-        </form>
-        <form class="hidden form2 add2">
-            <div class="formT2 form">
-                <div>
-                    <label>Espéce</label>
-                    <input type="text" class="Espece" required>
-                </div>
-                <div>
-                    <label>Nombre</label>
-                    <input type="number" class="Nombre" required>
-                </div>
-                <button type="submit"> Ajouter espéce</button>
-            </div>
-        </form>
-        <form class="hidden form2 suprim2">
-            <div class="formT2sup form">
-                <div>
-                    <label>Numéro d'espéce a supprimer</label>
-                    <input type="number" class="num_sup_Espece" required>
-                </div>
-                <button type="submit"> Supprimer espéce</button>
-            </div>
-        </form>
-        <form class="hidden form2 edit2">
-            <div class="formT2edit form">
-                <div>
-                    <label>Numéro d'espéce a modifier</label>
-                    <input type="number" class="num_edit_Espece" required>
-                </div>
-                <div>
-                    <label>Espéce</label>
-                    <input type="text" class="edit_Espece" required>
-                </div>
-                <div>
-                    <label>Nombre</label>
-                    <input type="number" class="edit_Nombre" required>
-                </div>
-                <button type="submit"> Modifier espéce</button>
-            </div>
-        </form>
-    <script src="admin.js"></script>
 
+
+
+    <script src="admin.js"></script>
 </body>
 </html>

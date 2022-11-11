@@ -2,7 +2,17 @@ body{
     align-items: center;
     overflow-x: hidden;
     height: 2000px;
+    position: relative;
 }
+
+th{
+  text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
 .deconnect{
     width: 100%;
     height: 80px;
@@ -40,10 +50,10 @@ body{
 }
 
 tbody tr:nth-child(odd){
-    background-color:burlywood;
+    background-color:rgb(225, 196, 157);
 }
 tbody tr:nth-child(even){
-    background-color:aqua;
+    background-color:rgb(153, 217, 217);
 }
 
 .t1{
@@ -52,6 +62,7 @@ tbody tr:nth-child(even){
     margin-top: 15px;
     margin-bottom: 30px;
 }
+
 .t2{
     width: 70%;
     margin-left: 15%;
@@ -65,13 +76,6 @@ tbody tr:nth-child(even){
     text-align: center;   
 }
 
-.choixTableButtons{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-}
-
 .hidden{
     display: none;
 }
@@ -80,41 +84,34 @@ tbody tr:nth-child(even){
     background-color: rgb(102, 182, 102)!important;
 }
 
-.button{
-    width: 25%;
-    height: 30px;
-    margin-right: 25px;
-    border-radius: 6px;
-    color: black;
-    font-size: 15px;
-    font-weight: 500;
-    border: solid rgb(177, 175, 175) 0.5px;
-    box-shadow: 3px 3px 3px rgb(180, 175, 175);
-}
-
-.button:hover{
-    background-color: rgb(214, 133, 133);
-    color: white;
-}
-
 .form{
-    width: 90%;
+    width: 40%;
     display: flex;
-    margin-left: 5%;
-    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 40px;
+}
+
+
+.form div{
+    width: 100%;
+    display: block;
 }
 
 .form div input{
     margin-top: 8px;
-    width: 100%;
+    width: 95%;
     height: 30px;
     border-radius: 6px;
     border: 1px solid rgb(111, 108, 108);
 }
 
-.form button{
-    width: 15%;
-    margin-left: 3%;
+.form div button{
+    width: 40%;
+    margin-left: 10%;
     margin-top: 28px;
     height: 30px;
     border-radius: 6px;
@@ -125,45 +122,38 @@ tbody tr:nth-child(even){
     box-shadow: 3px 3px 3px rgb(180, 175, 175);
 }
 
+.ControlBut{
+    display: flex!important;
+}
+
 .form button:hover{
     background-color: rgb(214, 133, 133);
     color: white;
 }
 
 
-.formT1 div{
-    width: 25%;
-    margin-left: 2%;
-    display: block;
+#supicon ,#editicon ,#add{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    
 }
 
 
-.formT2 div{
-    width: 38%;
-    margin-left: 2%;
-    display: block;
+.mod1,.add1{
+    width: 100%;
+    height: inherit;
+    background-color: rgba(11, 11, 11, 0.63);
+    position: absolute;
+    padding-top: 200px;
 }
 
-.formT1sup div{
-    width: 80%;
-    margin-left: 2%;
-    display: block;
-}
-
-.formT1edit div{
-    width: 20%;
-    margin-left: 2%;
-    display: block;
-}
-.formT2sup div{
-    width: 80%;
-    margin-left: 2%;
-    display: block;
-}
-.formT2edit div{
-    width: 25%;
-    margin-left: 2%;
-    display: block;
+.mod2,.add2{
+    width: 100%;
+    height: inherit;
+    background-color: rgba(11, 11, 11, 0.63);
+    position: absolute;
+    padding-top: 500px;
 }
 
 
