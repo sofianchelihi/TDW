@@ -2,6 +2,14 @@ body{
     overflow-x: hidden;
 }
 
+th{
+    text-align: center;
+}
+  
+td{
+    text-align: center;
+}
+
 .lien{
     width: 100%;
     text-align: center;
@@ -78,6 +86,10 @@ tbody tr:nth-child(even){
 
 .list_type_agriculture:hover .type_agriculture{
     display: block;
+}
+
+.video{
+    width: 100%;
 }
 
 .type_agriculture li{
