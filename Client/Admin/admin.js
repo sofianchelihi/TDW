@@ -3,11 +3,11 @@ var edit2;
 
 
 $.ajax({
-    url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+    url:"http://localhost/Serveur/TDW/Serveur/View.php",
     type:'POST',
     dataType:'text',
     data:JSON.stringify({
-        service:"login",
+        service:"Vlogin",
         id_user: localStorage.getItem("id"),
         hashcode: localStorage.getItem("code")
     }),
@@ -18,11 +18,11 @@ $.ajax({
     },   
 });
 
-$(document).ready(function(){
+ $(document).ready(function(){
 
     $("#Deconnect").click(function(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -39,7 +39,7 @@ $(document).ready(function(){
 
     function AddT1(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -93,7 +93,7 @@ $(document).ready(function(){
 
     function AddT2(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -183,9 +183,6 @@ $(document).ready(function(){
 
 
 
-
-    AddT1();
-    AddT2();
      
 
     function CalculeSomme(Col){
@@ -210,7 +207,7 @@ $(document).ready(function(){
 
      function inserEelemntT1(c,s,p,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -227,9 +224,10 @@ $(document).ready(function(){
             }  
         });
      }
+
      function inserEelemntT2(e,n,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -248,7 +246,7 @@ $(document).ready(function(){
 
     function supEelemntT1(n1,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -266,7 +264,7 @@ $(document).ready(function(){
 
     function supEelemntT2(n2,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -284,7 +282,7 @@ $(document).ready(function(){
 
     function editEelemntT1(a1,b1,c1,d1,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -305,7 +303,7 @@ $(document).ready(function(){
 
     function editEelemntT2(a2,b2,c2,callfunction){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/admin.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({

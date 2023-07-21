@@ -7,15 +7,16 @@ $(document).ready(function(){
         $("#password").val("");
 
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/Login.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
+                service :"login",
                 username: username,
                 password: password
             }),
             success:(Data)=>{ 
-                var res = JSON.parse(Data)
+                var res = JSON.parse(Data);
                 if(res['etat']==true){
                     localStorage.setItem("id",res["id"])
                     localStorage.setItem("code",res["code"])
@@ -27,7 +28,6 @@ $(document).ready(function(){
         });
     });
 
-   var ti ="hello";
    
     
  });

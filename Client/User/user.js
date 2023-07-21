@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     function AddT1(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/user.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -31,7 +31,7 @@ $(document).ready(function(){
                 var listT1= JSON.parse(Data);
                 $(".bd1").html("<tr> <th scope='row'> Somme</th> <td class='somme'></td>  <td class='somme'></td> </tr>");
                 listT1.forEach(element => {
-                    var th = $("<th></th>").text(element['Id_culture']+"  )  "+element['Nom_culture']).attr("scope","row");                
+                    var th = $("<th></th>").text(element['Nom_culture']).attr("scope","row");                
                     var col1 = $("<td></td>").text(element['Superficie']).addClass("valTdT11");  
                     var col2 = $("<td></td>").text(element['Production']).addClass("valTdT12");   
                     $(".bd1").children("tr").last().before( $("<tr></tr>").append(th,col1,col2))
@@ -44,7 +44,7 @@ $(document).ready(function(){
 
     function AddT2(){
         $.ajax({
-            url:"http://localhost/Serveur/TDW/Controlleur/user.php",
+            url:"http://localhost/Serveur/TDW/Serveur/View.php",
             type:'POST',
             dataType:'text',
             data:JSON.stringify({
@@ -54,7 +54,7 @@ $(document).ready(function(){
                 var listT2= JSON.parse(Data);
                 $(".bd2").html("<tr><th scope='row'> Somme</th><td class='somme'></td></tr>");
                 listT2.forEach(element => {
-                    var th = $("<th></th>").text(element["Id_elevage"]+" ) "+element["Nom_animal"]).attr("scope","row");                
+                    var th = $("<th></th>").text(element["Nom_animal"]).attr("scope","row");                
                     var col = $("<td></td>").text(element["Nombre_tete"] ).addClass("valTdT2");  
                     $(".bd2").children("tr").last().before($("<tr></tr>").append(th,col))
                 });
@@ -71,21 +71,19 @@ $(document).ready(function(){
 
 
    $.ajax({
-    url:"http://localhost/Serveur/TDW/Controlleur/user.php",
+    url:"http://localhost/Serveur/TDW/Serveur/View.php",
     type:'POST',
     dataType:'text',
     data:JSON.stringify({
         service:"menu"
     }),
     success:(res)=>{
-        JSON.parse(res).forEach(element => {
-            $(".menu").append("<li><a href='#'> "+element['Nom_item_menu']+" </a></li>")
-        });
+        $(".menu").append(res);
     }    
     });
 
     $.ajax({
-        url:"http://localhost/Serveur/TDW/Controlleur/user.php",
+        url:"http://localhost/Serveur/TDW/Serveur/View.php",
         type:'POST',
         dataType:'text',
         data:JSON.stringify({
@@ -94,11 +92,46 @@ $(document).ready(function(){
         success:(res)=>{
             $(".menu li").eq(1).addClass("list_type_agriculture");
             $(".menu li").eq(1).append("<ul class='type_agriculture'></ul>")
-            JSON.parse(res).forEach(element =>{
-                $(".type_agriculture").append("<li><a href='#'> "+element['Type_agriculture']+" </a></li>")
-            });
+            $(".type_agriculture").append(res);
         }    
-        });
+    });
+
+    $.ajax({
+        url:"http://localhost/Serveur/TDW/Serveur/View.php",
+        type:'POST',
+        dataType:'text',
+        data:JSON.stringify({
+            service:"diaporama"
+        }),
+        success:(res)=>{
+            $(".slider").append(res);
+        }    
+    });
+
+    $.ajax({
+        url:"http://localhost/Serveur/TDW/Serveur/View.php",
+        type:'POST',
+        dataType:'text',
+        data:JSON.stringify({
+            service:"title"
+        }),
+        success:(res)=>{
+            $(".titre").append(res);
+        }    
+    });
+
+    $.ajax({
+        url:"http://localhost/Serveur/TDW/Serveur/View.php",
+        type:'POST',
+        dataType:'text',
+        data:JSON.stringify({
+            service:"video"
+        }),
+        success:(res)=>{
+            $(".video").append(res);
+        }    
+    });
+
 
 
 });
